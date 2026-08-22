@@ -1,0 +1,51 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { user_pages } from "./user.pages.ts";
+import { user_tables } from "./user.tables.ts";
+
+export const user_module = define_module({
+  resource: "user",
+  labels: {
+    singular: "Usuarios",
+    plural: "Usuarios",
+    read: "Ver Usuarios",
+    write: "Editar Usuarios",
+  },
+  routes: define_crud({
+    resource: "user",
+    table: "user",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "user",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      password: { type: "string", search: true },
+      email: { type: "string", search: true },
+      img: { type: "string", search: true },
+      enabled_dashboard_components: { type: "json" },
+      employee: { type: "string", search: true },
+      start_view: { type: "string", search: true },
+      mode: { type: "string", search: true },
+      path: { type: "string", search: true },
+      view_kind: { type: "string", search: true },
+      menu_id: { type: "string", search: true },
+      label: { type: "string", search: true },
+      reset_password_token_hash: { type: "string", search: true },
+      reset_password_expires: { type: "string", search: true },
+      reset_password_kind: { type: "string", search: true },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: user_tables,
+  pages: user_pages,
+  menu: [],
+});

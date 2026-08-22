@@ -1,0 +1,53 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { auto_increment_control_pages } from "./auto-increment-control.pages.ts";
+import { auto_increment_control_tables } from "./auto-increment-control.tables.ts";
+
+export const auto_increment_control_module = define_module({
+  resource: "auto-increment-control",
+  labels: {
+    singular: "Configuración de counters",
+    plural: "Configuración de counters",
+    read: "Ver Configuración de counters",
+    write: "Editar Configuración de counters",
+  },
+  routes: define_crud({
+    resource: "auto-increment-control",
+    table: "auto_increment_control",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "auto-inc",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      model_name: { type: "string", search: true },
+      collection: { type: "string", search: true },
+      increment_field: { type: "string", search: true },
+      index_name: { type: "string", search: true },
+      type: { type: "string", search: true },
+      custom_pattern: { type: "string", search: true },
+      custom_pattern_defined_manually: { type: "boolean" },
+      custom_pattern_parts: { type: "string", search: true },
+      custom_conditions_ids: { type: "string", search: true },
+      current_sequence: { type: "number" },
+      current_real_value: { type: "json" },
+      ref_value: { type: "json" },
+      segment: { type: "string", search: true },
+      module_ref: { type: "string", search: true },
+      _unique_string_reference: { type: "string", search: true },
+      user_edited: { type: "boolean" },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: auto_increment_control_tables,
+  pages: auto_increment_control_pages,
+  menu: [],
+});

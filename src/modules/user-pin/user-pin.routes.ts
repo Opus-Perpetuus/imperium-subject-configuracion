@@ -1,0 +1,53 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { user_pin_pages } from "./user-pin.pages.ts";
+import { user_pin_tables } from "./user-pin.tables.ts";
+
+export const user_pin_module = define_module({
+  resource: "user-pin",
+  labels: {
+    singular: "Pins de usuario",
+    plural: "Pins de usuario",
+    read: "Ver Pins de usuario",
+    write: "Editar Pins de usuario",
+  },
+  routes: define_crud({
+    resource: "user-pin",
+    table: "user_pin",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "user-pin",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      document_id: { type: "string", search: true },
+      document_collection: { type: "string", search: true },
+      document_model: { type: "string", search: true },
+      document_label: { type: "string", search: true },
+      is_global: { type: "boolean" },
+      pin_type: { type: "string", search: true },
+      pin_length: { type: "number" },
+      auto_generated: { type: "boolean" },
+      method: { type: "string", search: true },
+      path: { type: "string", search: true },
+      route_key: { type: "string", search: true },
+      label: { type: "string", search: true },
+      assigned_users: { type: "json" },
+      pin_hash: { type: "string", search: true },
+      pin_version: { type: "number" },
+      feature_toggle_key: { type: "string", search: true },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: user_pin_tables,
+  pages: user_pin_pages,
+  menu: [],
+});

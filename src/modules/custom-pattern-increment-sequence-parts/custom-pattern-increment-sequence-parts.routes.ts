@@ -1,0 +1,50 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { custom_pattern_increment_sequence_parts_pages } from "./custom-pattern-increment-sequence-parts.pages.ts";
+import { custom_pattern_increment_sequence_parts_tables } from "./custom-pattern-increment-sequence-parts.tables.ts";
+
+export const custom_pattern_increment_sequence_parts_module = define_module({
+  resource: "custom-pattern-increment-sequence-parts",
+  labels: {
+    singular: "Partes de secuencia",
+    plural: "Partes de secuencia",
+    read: "Ver Partes de secuencia",
+    write: "Editar Partes de secuencia",
+  },
+  routes: define_crud({
+    resource: "custom-pattern-increment-sequence-parts",
+    table: "custom_pattern_increment_sequence_parts",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "custom-p",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      counter_config_id: { type: "string", search: true },
+      modelo: { type: "string", search: true },
+      token_type: { type: "string", search: true },
+      token_value: { type: "string", search: true },
+      field_path: { type: "string", search: true },
+      counter_index_name: { type: "string", search: true },
+      zero_padding: { type: "number" },
+      format_mode: { type: "string", search: true },
+      condition_field: { type: "string", search: true },
+      condition_expected_value: { type: "string", search: true },
+      condition_return_value: { type: "string", search: true },
+      custom_conditions: { type: "string", search: true },
+      order: { type: "number" },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: custom_pattern_increment_sequence_parts_tables,
+  pages: custom_pattern_increment_sequence_parts_pages,
+  menu: [],
+});

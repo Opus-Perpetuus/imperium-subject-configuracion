@@ -1,0 +1,50 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { status_option_control_pages } from "./status-option-control.pages.ts";
+import { status_option_control_tables } from "./status-option-control.tables.ts";
+
+export const status_option_control_module = define_module({
+  resource: "status-option-control",
+  labels: {
+    singular: "Opciones de estatus",
+    plural: "Opciones de estatus",
+    read: "Ver Opciones de estatus",
+    write: "Editar Opciones de estatus",
+  },
+  routes: define_crud({
+    resource: "status-option-control",
+    table: "status_option_control",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "status-o",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      module_name: { type: "string", search: true },
+      model_id: { type: "string", search: true },
+      module_id: { type: "string", search: true },
+      is_enable: { type: "string", search: true },
+      configuration_id: { type: "string", search: true },
+      has_configuration: { type: "string", search: true },
+      status_options_count: { type: "string", search: true },
+      status_fields_count: { type: "string", search: true },
+      option_field_name: { type: "string", search: true },
+      option_color: { type: "string", search: true },
+      option_icon: { type: "string", search: true },
+      option_type: { type: "string", search: true },
+      option_is_default: { type: "string", search: true },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: status_option_control_tables,
+  pages: status_option_control_pages,
+  menu: [],
+});

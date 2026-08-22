@@ -1,0 +1,41 @@
+import type { KirletTableDecl } from "@opus-perpetuus/imperium-core-kit";
+
+export const user_pin_tables: KirletTableDecl[] = [
+  {
+    name: "user_pin",
+    columns: [
+      { name: "id", type: "text", primaryKey: true },
+      { name: "name", type: "text", notNull: true },
+      { name: "description", type: "text" },
+      { name: "is_active", type: "boolean", notNull: true, default: true },
+      { name: "state", type: "text" },
+      { name: "ref", type: "text", unique: true },
+      { name: "search_field", type: "text" },
+      { name: "created_by", type: "text" },
+      { name: "custom_data", type: "json" },
+      { name: "payload", type: "json" },
+      { name: "created_at", type: "text", notNull: true },
+      { name: "updated_at", type: "text", notNull: true },
+      { name: "document_id", type: "text" },
+      { name: "document_collection", type: "text" },
+      { name: "document_model", type: "text" },
+      { name: "document_label", type: "text" },
+      { name: "is_global", type: "boolean" },
+      { name: "pin_type", type: "text" },
+      { name: "pin_length", type: "real" },
+      { name: "auto_generated", type: "boolean" },
+      { name: "method", type: "text" },
+      { name: "path", type: "text" },
+      { name: "route_key", type: "text" },
+      { name: "label", type: "text" },
+      { name: "assigned_users", type: "json" },
+      { name: "pin_hash", type: "text" },
+      { name: "pin_version", type: "real" },
+      { name: "feature_toggle_key", type: "text" },
+    ],
+    indexes: [
+      { name: "idx_user_pin_name", columns: ["name"] },
+      { name: "idx_user_pin_active", columns: ["is_active"] },
+    ],
+  },
+];

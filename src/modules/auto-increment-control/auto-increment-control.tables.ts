@@ -1,0 +1,41 @@
+import type { KirletTableDecl } from "@opus-perpetuus/imperium-core-kit";
+
+export const auto_increment_control_tables: KirletTableDecl[] = [
+  {
+    name: "auto_increment_control",
+    columns: [
+      { name: "id", type: "text", primaryKey: true },
+      { name: "name", type: "text", notNull: true },
+      { name: "description", type: "text" },
+      { name: "is_active", type: "boolean", notNull: true, default: true },
+      { name: "state", type: "text" },
+      { name: "ref", type: "text", unique: true },
+      { name: "search_field", type: "text" },
+      { name: "created_by", type: "text" },
+      { name: "custom_data", type: "json" },
+      { name: "payload", type: "json" },
+      { name: "created_at", type: "text", notNull: true },
+      { name: "updated_at", type: "text", notNull: true },
+      { name: "model_name", type: "text" },
+      { name: "collection", type: "text" },
+      { name: "increment_field", type: "text" },
+      { name: "index_name", type: "text" },
+      { name: "type", type: "text" },
+      { name: "custom_pattern", type: "text" },
+      { name: "custom_pattern_defined_manually", type: "boolean" },
+      { name: "custom_pattern_parts", type: "text" },
+      { name: "custom_conditions_ids", type: "text" },
+      { name: "current_sequence", type: "real" },
+      { name: "current_real_value", type: "json" },
+      { name: "ref_value", type: "json" },
+      { name: "segment", type: "text" },
+      { name: "module_ref", type: "text" },
+      { name: "_unique_string_reference", type: "text" },
+      { name: "user_edited", type: "boolean" },
+    ],
+    indexes: [
+      { name: "idx_auto_increment_control_name", columns: ["name"] },
+      { name: "idx_auto_increment_control_active", columns: ["is_active"] },
+    ],
+  },
+];
