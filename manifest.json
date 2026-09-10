@@ -199,6 +199,231 @@
       "label": "Editar Rastreador/Catálogo de modelos Mongo"
     }
   ],
+  "menu": [
+    {
+      "id": "configuracion.root",
+      "label": "Configuración",
+      "order": 0,
+      "children": [
+        {
+          "id": "configuracion.attachment-management",
+          "label": "Documentos y adjuntos",
+          "pageId": "configuracion.attachment-management",
+          "order": 0,
+          "path": "attachment-management",
+          "permission": "subject.configuracion.attachment-management.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.user",
+          "label": "Usuarios",
+          "pageId": "configuracion.user",
+          "order": 0,
+          "path": "user",
+          "permission": "subject.configuracion.user.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.user-group",
+          "label": "Grupos de usuario",
+          "pageId": "configuracion.user-group",
+          "order": 0,
+          "path": "user-group",
+          "permission": "subject.configuracion.user-group.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.zpl-management",
+          "label": "Impresoras Zebra",
+          "pageId": "configuracion.zpl-management",
+          "order": 0,
+          "path": "zpl-management",
+          "permission": "subject.configuracion.zpl-management.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.country",
+          "label": "Paises",
+          "pageId": "configuracion.country",
+          "order": 0,
+          "path": "country",
+          "permission": "subject.configuracion.country.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.record-rules",
+          "label": "Reglas de registro",
+          "pageId": "configuracion.record-rules",
+          "order": 0,
+          "path": "record-rules",
+          "permission": "subject.configuracion.record-rules.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.menu-management",
+          "label": "Manejo de menús",
+          "pageId": "configuracion.menu-management",
+          "order": 0,
+          "path": "menu-management",
+          "permission": "subject.configuracion.menu-management.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.configuration",
+          "label": "Parametros del sistema",
+          "pageId": "configuracion.configuration",
+          "order": 0,
+          "path": "configuration",
+          "permission": "subject.configuracion.configuration.read",
+          "icon": "document",
+          "children": [
+            {
+              "id": "configuracion.interface-restriction",
+              "label": "Restricciones de interfaz",
+              "pageId": "configuracion.interface-restriction",
+              "order": 1,
+              "path": "interface-restriction",
+              "permission": "subject.configuracion.interface-restriction.read",
+              "icon": "document"
+            }
+          ]
+        },
+        {
+          "id": "configuracion.access-rights",
+          "label": "Permisos de acceso",
+          "pageId": "configuracion.access-rights",
+          "order": 0,
+          "path": "access-rights",
+          "permission": "subject.configuracion.access-rights.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.module-management",
+          "label": "Módulos",
+          "pageId": "configuracion.module-management",
+          "order": 0,
+          "path": "module-management",
+          "permission": "subject.configuracion.module-management.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.status-option-control",
+          "label": "Opciones de estatus",
+          "pageId": "configuracion.status-option-control",
+          "order": 0,
+          "path": "status-option-control",
+          "permission": "subject.configuracion.status-option-control.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.custom-field-control",
+          "label": "Campos personalizados",
+          "pageId": "configuracion.custom-field-control",
+          "order": 0,
+          "path": "custom-field-control",
+          "permission": "subject.configuracion.custom-field-control.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.folder.auto-increment-control-menu-serials-root",
+          "label": "Configuración de seriales",
+          "order": 0,
+          "children": [
+            {
+              "id": "configuracion.auto-increment-control",
+              "label": "Configuración de counters",
+              "pageId": "configuracion.auto-increment-control",
+              "order": 0,
+              "path": "auto-increment-control",
+              "permission": "subject.configuracion.auto-increment-control.read",
+              "icon": "document"
+            },
+            {
+              "id": "configuracion.custom-pattern-increment-sequence-parts",
+              "label": "Partes de secuencia",
+              "pageId": "configuracion.custom-pattern-increment-sequence-parts",
+              "order": 1,
+              "path": "custom-pattern-increment-sequence-parts",
+              "permission": "subject.configuracion.custom-pattern-increment-sequence-parts.read",
+              "icon": "document"
+            },
+            {
+              "id": "configuracion.custom-pattern-condition",
+              "label": "Custom pattern",
+              "pageId": "configuracion.custom-pattern-condition",
+              "order": 2,
+              "path": "custom-pattern-condition",
+              "permission": "subject.configuracion.custom-pattern-condition.read",
+              "icon": "document"
+            }
+          ]
+        },
+        {
+          "id": "configuracion.branchoffice",
+          "label": "Sucursales",
+          "pageId": "configuracion.branchoffice",
+          "order": 0,
+          "path": "branchoffice",
+          "permission": "subject.configuracion.branchoffice.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.model-tracker",
+          "label": "Rastreador/Catálogo de modelos Mongo",
+          "pageId": "configuracion.model-tracker",
+          "order": 0,
+          "path": "model-tracker",
+          "permission": "subject.configuracion.model-tracker.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.api-keys",
+          "label": "API keys",
+          "pageId": "configuracion.api-keys",
+          "order": 1,
+          "path": "api-keys",
+          "permission": "subject.configuracion.api-keys.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.epson-ticket-template",
+          "label": "Plantillas EPSON",
+          "pageId": "configuracion.epson-ticket-template",
+          "order": 4,
+          "path": "epson-ticket-template",
+          "permission": "subject.configuracion.epson-ticket-template.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.tags",
+          "label": "Etiquetas",
+          "pageId": "configuracion.tags",
+          "order": 10,
+          "path": "tags",
+          "permission": "subject.configuracion.tags.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.user-pin",
+          "label": "Pins de usuario",
+          "pageId": "configuracion.user-pin",
+          "order": 60,
+          "path": "user-pin",
+          "permission": "subject.configuracion.user-pin.read",
+          "icon": "document"
+        },
+        {
+          "id": "configuracion.debug-log",
+          "label": "Logs del Sistema",
+          "pageId": "configuracion.debug-log",
+          "order": 99,
+          "path": "debug-log",
+          "permission": "subject.configuracion.debug-log.read",
+          "icon": "document"
+        }
+      ]
+    }
+  ],
   "pages": [
     {
       "id": "configuracion.attachment-management",
@@ -316,234 +541,33 @@
       "permission": "subject.configuracion.model-tracker.read"
     }
   ],
-  "menu": [
-    {
-      "id": "configuracion.root",
-      "label": "Configuración",
-      "order": 0,
-      "children": [
-        {
-          "id": "configuracion.attachment-management",
-          "label": "Documentos y adjuntos",
-          "order": 0,
-          "pageId": "configuracion.attachment-management",
-          "path": "attachment-management",
-          "permission": "subject.configuracion.attachment-management.read"
-        },
-        {
-          "id": "configuracion.user",
-          "label": "Usuarios",
-          "order": 0,
-          "pageId": "configuracion.user",
-          "path": "user",
-          "permission": "subject.configuracion.user.read"
-        },
-        {
-          "id": "configuracion.user-group",
-          "label": "Grupos de usuario",
-          "order": 0,
-          "pageId": "configuracion.user-group",
-          "path": "user-group",
-          "permission": "subject.configuracion.user-group.read"
-        },
-        {
-          "id": "configuracion.zpl-management",
-          "label": "Impresoras Zebra",
-          "order": 0,
-          "pageId": "configuracion.zpl-management",
-          "path": "zpl-management",
-          "permission": "subject.configuracion.zpl-management.read"
-        },
-        {
-          "id": "configuracion.country",
-          "label": "Paises",
-          "order": 0,
-          "pageId": "configuracion.country",
-          "path": "country",
-          "permission": "subject.configuracion.country.read"
-        },
-        {
-          "id": "configuracion.record-rules",
-          "label": "Reglas de registro",
-          "order": 0,
-          "pageId": "configuracion.record-rules",
-          "path": "record-rules",
-          "permission": "subject.configuracion.record-rules.read"
-        },
-        {
-          "id": "configuracion.menu-management",
-          "label": "Manejo de menús",
-          "order": 0,
-          "pageId": "configuracion.menu-management",
-          "path": "menu-management",
-          "permission": "subject.configuracion.menu-management.read"
-        },
-        {
-          "id": "configuracion.configuration",
-          "label": "Parametros del sistema",
-          "order": 0,
-          "pageId": "configuracion.configuration",
-          "path": "configuration",
-          "permission": "subject.configuracion.configuration.read",
-          "children": [
-            {
-              "id": "configuracion.interface-restriction",
-              "label": "Restricciones de interfaz",
-              "order": 1,
-              "pageId": "configuracion.interface-restriction",
-              "path": "interface-restriction",
-              "permission": "subject.configuracion.interface-restriction.read"
-            }
-          ]
-        },
-        {
-          "id": "configuracion.access-rights",
-          "label": "Permisos de acceso",
-          "order": 0,
-          "pageId": "configuracion.access-rights",
-          "path": "access-rights",
-          "permission": "subject.configuracion.access-rights.read"
-        },
-        {
-          "id": "configuracion.module-management",
-          "label": "Módulos",
-          "order": 0,
-          "pageId": "configuracion.module-management",
-          "path": "module-management",
-          "permission": "subject.configuracion.module-management.read"
-        },
-        {
-          "id": "configuracion.status-option-control",
-          "label": "Opciones de estatus",
-          "order": 0,
-          "pageId": "configuracion.status-option-control",
-          "path": "status-option-control",
-          "permission": "subject.configuracion.status-option-control.read"
-        },
-        {
-          "id": "configuracion.custom-field-control",
-          "label": "Campos personalizados",
-          "order": 0,
-          "pageId": "configuracion.custom-field-control",
-          "path": "custom-field-control",
-          "permission": "subject.configuracion.custom-field-control.read"
-        },
-        {
-          "id": "configuracion.folder.auto-increment-control-menu-serials-root",
-          "label": "Configuración de seriales",
-          "order": 0,
-          "children": [
-            {
-              "id": "configuracion.auto-increment-control",
-              "label": "Configuración de counters",
-              "order": 0,
-              "pageId": "configuracion.auto-increment-control",
-              "path": "auto-increment-control",
-              "permission": "subject.configuracion.auto-increment-control.read"
-            },
-            {
-              "id": "configuracion.custom-pattern-increment-sequence-parts",
-              "label": "Partes de secuencia",
-              "order": 1,
-              "pageId": "configuracion.custom-pattern-increment-sequence-parts",
-              "path": "custom-pattern-increment-sequence-parts",
-              "permission": "subject.configuracion.custom-pattern-increment-sequence-parts.read"
-            },
-            {
-              "id": "configuracion.custom-pattern-condition",
-              "label": "Custom pattern",
-              "order": 2,
-              "pageId": "configuracion.custom-pattern-condition",
-              "path": "custom-pattern-condition",
-              "permission": "subject.configuracion.custom-pattern-condition.read"
-            }
-          ]
-        },
-        {
-          "id": "configuracion.branchoffice",
-          "label": "Sucursales",
-          "order": 0,
-          "pageId": "configuracion.branchoffice",
-          "path": "branchoffice",
-          "permission": "subject.configuracion.branchoffice.read"
-        },
-        {
-          "id": "configuracion.model-tracker",
-          "label": "Rastreador/Catálogo de modelos Mongo",
-          "order": 0,
-          "pageId": "configuracion.model-tracker",
-          "path": "model-tracker",
-          "permission": "subject.configuracion.model-tracker.read"
-        },
-        {
-          "id": "configuracion.api-keys",
-          "label": "API keys",
-          "order": 1,
-          "pageId": "configuracion.api-keys",
-          "path": "api-keys",
-          "permission": "subject.configuracion.api-keys.read"
-        },
-        {
-          "id": "configuracion.epson-ticket-template",
-          "label": "Plantillas EPSON",
-          "order": 4,
-          "pageId": "configuracion.epson-ticket-template",
-          "path": "epson-ticket-template",
-          "permission": "subject.configuracion.epson-ticket-template.read"
-        },
-        {
-          "id": "configuracion.tags",
-          "label": "Etiquetas",
-          "order": 10,
-          "pageId": "configuracion.tags",
-          "path": "tags",
-          "permission": "subject.configuracion.tags.read"
-        },
-        {
-          "id": "configuracion.user-pin",
-          "label": "Pins de usuario",
-          "order": 60,
-          "pageId": "configuracion.user-pin",
-          "path": "user-pin",
-          "permission": "subject.configuracion.user-pin.read"
-        },
-        {
-          "id": "configuracion.debug-log",
-          "label": "Logs del Sistema",
-          "order": 99,
-          "pageId": "configuracion.debug-log",
-          "path": "debug-log",
-          "permission": "subject.configuracion.debug-log.read"
-        }
-      ]
-    }
-  ],
   "storage": {
-    "domain": "shared-nox-postgres"
+    "domain": "shared-nox-postgres",
+    "files": false
   },
   "resources": {
-    "attachment-management": "attachment_management",
+    "attachment-management": "attachment-management",
     "user": "user",
-    "user-group": "user_group",
-    "zpl-management": "zpl_management",
-    "user-pin": "user_pin",
-    "epson-ticket-template": "epson_ticket_template",
+    "user-group": "user-group",
+    "zpl-management": "zpl-management",
+    "user-pin": "user-pin",
+    "epson-ticket-template": "epson-ticket-template",
     "country": "country",
-    "record-rules": "record_rules",
+    "record-rules": "record-rules",
     "tags": "tags",
-    "menu-management": "menu_management",
+    "menu-management": "menu-management",
     "configuration": "configuration",
-    "interface-restriction": "interface_restriction",
-    "access-rights": "access_rights",
-    "module-management": "module_management",
-    "debug-log": "debug_log",
-    "status-option-control": "status_option_control",
-    "api-keys": "api_keys",
-    "custom-field-control": "custom_field_control",
-    "custom-pattern-condition": "custom_pattern_condition",
-    "custom-pattern-increment-sequence-parts": "custom_pattern_increment_sequence_parts",
-    "auto-increment-control": "auto_increment_control",
+    "interface-restriction": "interface-restriction",
+    "access-rights": "access-rights",
+    "module-management": "module-management",
+    "debug-log": "debug-log",
+    "status-option-control": "status-option-control",
+    "api-keys": "api-keys",
+    "custom-field-control": "custom-field-control",
+    "custom-pattern-condition": "custom-pattern-condition",
+    "custom-pattern-increment-sequence-parts": "custom-pattern-increment-sequence-parts",
+    "auto-increment-control": "auto-increment-control",
     "branchoffice": "branchoffice",
-    "model-tracker": "model_tracker"
+    "model-tracker": "model-tracker"
   }
 }
