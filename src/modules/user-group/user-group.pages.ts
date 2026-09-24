@@ -50,7 +50,7 @@ export const user_group_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "menus_ids", component: "input-text", label: "menus ids" },
               { name: "user_ids", component: "input-text", label: "user ids" },

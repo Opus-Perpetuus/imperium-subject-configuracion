@@ -52,14 +52,22 @@ export const user_pin_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "document_id", component: "input-text", label: "document id" },
               { name: "document_collection", component: "input-text", label: "document collection" },
               { name: "document_model", component: "input-text", label: "document model" },
               { name: "document_label", component: "input-text", label: "document label" },
               { name: "is_global", component: "input-checkbox", label: "is global" },
-              { name: "pin_type", component: "input-text", label: "pin type" },
+              {
+                name: "pin_type",
+                component: "input-menu",
+                label: "pin type",
+                options: [
+                  { value: "numeric", label: "Numerico" },
+                  { value: "letters", label: "Letras" },
+                ],
+              },
               { name: "pin_length", component: "input-number", label: "pin length" },
               { name: "auto_generated", component: "input-checkbox", label: "auto generated" },
               { name: "method", component: "input-text", label: "method" },

@@ -52,13 +52,22 @@ export const auto_increment_control_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "model_name", component: "input-text", label: "model name" },
               { name: "collection", component: "input-text", label: "collection" },
               { name: "increment_field", component: "input-text", label: "increment field" },
               { name: "index_name", component: "input-text", label: "index name" },
-              { name: "type", component: "input-text", label: "type" },
+              {
+                name: "type",
+                component: "input-menu",
+                label: "type",
+                options: [
+                  { value: "custom", label: "Personalizado" },
+                  { value: "numeric", label: "Numérico" },
+                  { value: "alphanumeric", label: "Alfanumérico" },
+                ],
+              },
               { name: "custom_pattern", component: "input-text", label: "custom pattern" },
               { name: "custom_pattern_defined_manually", component: "input-checkbox", label: "custom pattern defined manually" },
               { name: "custom_pattern_parts", component: "input-text", label: "custom pattern parts" },

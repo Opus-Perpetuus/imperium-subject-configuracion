@@ -52,13 +52,41 @@ export const epson_ticket_template_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "template_key", component: "input-text", label: "template key" },
-              { name: "content", component: "input-text", label: "content" },
+              {
+                name: "template_key",
+                component: "input-menu",
+                label: "template key",
+                options: [
+                  { value: "POS_SALE", label: "Ticket POS" },
+                  { value: "OFFLINE_ORDER", label: "Pedido offline" },
+                  { value: "AGUA_LECTURA", label: "Recibo de lectura" },
+                ],
+              },
+              { name: "content", component: "input-code-editor", label: "content", code_editor_language: "imperium-ticket-dsl", code_editor_completion_kind: "dsl" },
               { name: "line_width", component: "input-number", label: "line width" },
-              { name: "render_target", component: "input-text", label: "render target" },
-              { name: "dpmm", component: "input-text", label: "dpmm" },
+              {
+                name: "render_target",
+                component: "input-menu",
+                label: "render target",
+                options: [
+                  { value: "ESCPOS", label: "Epson (ESC/POS)" },
+                  { value: "ZPL", label: "Zebra (ZPL)" },
+                  { value: "BOTH", label: "Ambos" },
+                ],
+              },
+              {
+                name: "dpmm",
+                component: "input-menu",
+                label: "dpmm",
+                options: [
+                  { value: "6dpmm", label: "6dpmm (152dpi)" },
+                  { value: "8dpmm", label: "8dpmm (203dpi)" },
+                  { value: "12dpmm", label: "12dpmm (300dpi)" },
+                  { value: "24dpmm", label: "24dpmm (600dpi)" },
+                ],
+              },
               { name: "label_size_mm_x", component: "input-number", label: "label size mm x" },
               { name: "label_size_mm_y", component: "input-number", label: "label size mm y" },
             ],

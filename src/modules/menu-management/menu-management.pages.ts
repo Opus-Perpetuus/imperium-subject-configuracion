@@ -51,12 +51,12 @@ export const menu_management_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "icon", component: "input-text", label: "icon" },
+              { name: "icon", component: "input-icon", label: "icon" },
               { name: "path", component: "input-text", label: "path" },
-              { name: "parent_id", component: "input-text", label: "parent id" },
-              { name: "order", component: "input-text", label: "order" },
+              { name: "parent_id", component: "input-datalist", label: "parent id", optionsSource: "api://m/subject-configuracion/menu-management?as=options&limite=1000" },
+              { name: "order", component: "input-number", label: "order" },
               { name: "model", component: "input-text", label: "model" },
             ],
           },

@@ -52,12 +52,44 @@ export const access_rights_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "allow_read", component: "input-text", label: "allow read" },
-              { name: "allow_update", component: "input-text", label: "allow update" },
-              { name: "allow_delete", component: "input-text", label: "allow delete" },
-              { name: "allow_create", component: "input-text", label: "allow create" },
+              {
+                name: "allow_read",
+                component: "input-switch",
+                label: "allow read",
+                options: [
+                  { value: "true", label: "Sí" },
+                  { value: "false", label: "No" },
+                ],
+              },
+              {
+                name: "allow_update",
+                component: "input-switch",
+                label: "allow update",
+                options: [
+                  { value: "true", label: "Sí" },
+                  { value: "false", label: "No" },
+                ],
+              },
+              {
+                name: "allow_delete",
+                component: "input-switch",
+                label: "allow delete",
+                options: [
+                  { value: "true", label: "Sí" },
+                  { value: "false", label: "No" },
+                ],
+              },
+              {
+                name: "allow_create",
+                component: "input-switch",
+                label: "allow create",
+                options: [
+                  { value: "true", label: "Sí" },
+                  { value: "false", label: "No" },
+                ],
+              },
               { name: "model_id", component: "input-text", label: "model id" },
               { name: "group_id", component: "input-text", label: "group id" },
             ],

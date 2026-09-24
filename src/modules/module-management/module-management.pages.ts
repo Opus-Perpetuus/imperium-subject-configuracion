@@ -52,7 +52,7 @@ export const module_management_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "is_enable", component: "input-checkbox", label: "is enable" },
               { name: "path", component: "input-text", label: "path" },
@@ -61,7 +61,7 @@ export const module_management_pages: KirletPageDecl[] = [
               { name: "module_name", component: "input-text", label: "module name" },
               { name: "parent_module", component: "input-text", label: "parent module" },
               { name: "module_dependencies", component: "input-text", label: "module dependencies" },
-              { name: "data_installed_at", component: "input-text", label: "data installed at" },
+              { name: "data_installed_at", component: "input-datetime", label: "data installed at" },
               { name: "reference", component: "input-text", label: "reference" },
             ],
           },

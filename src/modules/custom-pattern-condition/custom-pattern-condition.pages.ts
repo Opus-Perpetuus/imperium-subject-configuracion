@@ -52,9 +52,9 @@ export const custom_pattern_condition_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "part_id", component: "input-text", label: "part id" },
+              { name: "part_id", component: "input-datalist", label: "part id", optionsSource: "api://m/subject-configuracion/custom-pattern-increment-sequence-parts?as=options&limite=1000" },
               { name: "modelo", component: "input-text", label: "modelo" },
               { name: "field_path", component: "input-text", label: "field path" },
               { name: "expected_value", component: "input-text", label: "expected value" },

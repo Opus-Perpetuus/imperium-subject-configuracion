@@ -52,7 +52,7 @@ export const status_option_control_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "module_name", component: "input-text", label: "module name" },
               { name: "model_id", component: "input-text", label: "model id" },
@@ -64,7 +64,7 @@ export const status_option_control_pages: KirletPageDecl[] = [
               { name: "status_fields_count", component: "input-text", label: "status fields count" },
               { name: "option_field_name", component: "input-text", label: "option field name" },
               { name: "option_color", component: "input-text", label: "option color" },
-              { name: "option_icon", component: "input-text", label: "option icon" },
+              { name: "option_icon", component: "input-icon", label: "option icon" },
               { name: "option_type", component: "input-text", label: "option type" },
               { name: "option_is_default", component: "input-text", label: "option is default" },
             ],

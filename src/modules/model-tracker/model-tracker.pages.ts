@@ -52,7 +52,7 @@ export const model_tracker_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "__model_name", component: "input-text", label: "  model name" },
               { name: "__collection", component: "input-text", label: "  collection" },
@@ -94,7 +94,7 @@ export const model_tracker_pages: KirletPageDecl[] = [
               { name: "value", component: "input-text", label: "value" },
               { name: "display_leyend", component: "input-text", label: "display leyend" },
               { name: "color", component: "input-text", label: "color" },
-              { name: "icon", component: "input-text", label: "icon" },
+              { name: "icon", component: "input-icon", label: "icon" },
               { name: "field_name", component: "input-text", label: "field name" },
               { name: "enabled", component: "input-checkbox", label: "enabled" },
               { name: "read_only", component: "input-checkbox", label: "read only" },

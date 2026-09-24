@@ -51,11 +51,21 @@ export const zpl_management_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "zpl", component: "input-text", label: "zpl" },
-              { name: "content", component: "input-text", label: "content" },
-              { name: "dpmm", component: "input-text", label: "dpmm" },
+              { name: "zpl", component: "input-code-editor", label: "zpl", code_editor_language: "imperium-zpl", code_editor_completion_kind: "zpl" },
+              { name: "content", component: "input-code-editor", label: "content", code_editor_language: "imperium-ticket-dsl", code_editor_completion_kind: "dsl" },
+              {
+                name: "dpmm",
+                component: "input-menu",
+                label: "dpmm",
+                options: [
+                  { value: "6dpmm", label: "6dpmm (152dpi)" },
+                  { value: "8dpmm", label: "8dpmm (203dpi)" },
+                  { value: "12dpmm", label: "12dpmm (300dpi)" },
+                  { value: "24dpmm", label: "24dpmm (600dpi)" },
+                ],
+              },
               { name: "label_size_mm_x", component: "input-number", label: "label size mm x" },
               { name: "label_size_mm_y", component: "input-number", label: "label size mm y" },
             ],

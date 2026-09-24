@@ -52,7 +52,7 @@ export const record_rules_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "allow_read", component: "input-checkbox", label: "allow read" },
               { name: "allow_update", component: "input-checkbox", label: "allow update" },
@@ -60,7 +60,7 @@ export const record_rules_pages: KirletPageDecl[] = [
               { name: "allow_create", component: "input-checkbox", label: "allow create" },
               { name: "model_id", component: "input-text", label: "model id" },
               { name: "group_id", component: "input-text", label: "group id" },
-              { name: "domain", component: "input-text", label: "domain" },
+              { name: "domain", component: "input-code-editor", label: "domain" },
             ],
           },
         },

@@ -52,7 +52,7 @@ export const attachment_management_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "name_stored", component: "input-text", label: "name stored" },
               { name: "mimetype", component: "input-text", label: "mimetype" },

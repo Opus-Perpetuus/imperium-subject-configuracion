@@ -48,10 +48,10 @@ export const tags_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "color", component: "input-text", label: "color" },
-              { name: "icon", component: "input-text", label: "icon" },
+              { name: "icon", component: "input-icon", label: "icon" },
             ],
           },
         },

@@ -49,11 +49,11 @@ export const branchoffice_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "location", component: "input-text", label: "location" },
-              { name: "image", component: "input-text", label: "image" },
-              { name: "listaDePrecios", component: "input-text", label: "listaDePrecios" },
+              { name: "image", component: "input-image", label: "image" },
+              { name: "listaDePrecios", component: "input-datalist", label: "listaDePrecios", optionsSource: "api://m/subject-ventas/lista-de-precios?as=options&limite=1000" },
             ],
           },
         },
