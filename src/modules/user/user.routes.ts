@@ -42,6 +42,7 @@ export const user_module = define_module({
       reset_password_token_hash: { type: "string", search: true },
       reset_password_expires: { type: "string", search: true },
       reset_password_kind: { type: "string", search: true },
+      listaDePrecios: { type: "string", search: true },
     },
     options_map: { value: "id", label: "name" },
   }),

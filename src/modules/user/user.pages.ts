@@ -78,6 +78,7 @@ export const user_pages: KirletPageDecl[] = [
               { name: "reset_password_token_hash", component: "input-text", label: "reset password token hash" },
               { name: "reset_password_expires", component: "input-datetime", label: "reset password expires" },
               { name: "reset_password_kind", component: "input-text", label: "reset password kind" },
+              { name: "listaDePrecios", component: "input-datalist", label: "listaDePrecios", optionsSource: "api://m/subject-ventas/lista-de-precios?as=options&limite=1000" },
             ],
           },
         },

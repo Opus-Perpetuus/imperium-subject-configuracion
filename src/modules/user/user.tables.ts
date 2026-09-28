@@ -30,6 +30,7 @@ export const user_tables: KirletTableDecl[] = [
       { name: "reset_password_token_hash", type: "text" },
       { name: "reset_password_expires", type: "text" },
       { name: "reset_password_kind", type: "text" },
+      { name: "listaDePrecios", type: "text" },
     ],
     indexes: [
       { name: "idx_user_name", columns: ["name"] },
