@@ -31,7 +31,8 @@ export const module_management_module = define_module({
       is_enable: { type: "boolean" },
       path: { type: "string", search: true },
       model_id: { type: "string", search: true },
-      module_location: { type: "string", search: true },
+      // Ruta del módulo en el menú, no una ubicación física.
+      module_location: { type: "string", search: true, field_values: true },
       module_name: { type: "string", search: true },
       parent_module: { type: "string", search: true },
       module_dependencies: { type: "string", search: true },
