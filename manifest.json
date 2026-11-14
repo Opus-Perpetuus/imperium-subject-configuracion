@@ -2,8 +2,8 @@
   "id": "SUBJECT-configuracion",
   "technicalId": "subject-configuracion",
   "name": "Configuración",
-  "version": "0.4.10",
-  "image": "ghcr.io/opus-perpetuus/subject-configuracion:0.4.10",
+  "version": "0.4.11",
+  "image": "ghcr.io/opus-perpetuus/subject-configuracion:0.4.11",
   "compat": {
     "nox": ">=0.5.0",
     "kit": "^0.5.0"
